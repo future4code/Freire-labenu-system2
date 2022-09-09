@@ -24,8 +24,6 @@ export class StudentController {
         }
 
     }
-
-
     async getUseByName(req:Request,res:Response){
         let errorStatus = 500
         try{
@@ -41,7 +39,6 @@ export class StudentController {
             res.status(errorStatus).send({message: error.message})
         }
     }
-
     async changeClass(req:Request,res:Response){
         let errorStatus = 500
         try{
@@ -58,4 +55,5 @@ export class StudentController {
             res.status(errorStatus).send({message: error.message})
         }
     }
+
 }

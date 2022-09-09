@@ -2,9 +2,10 @@ import { Student } from "../models/Student";
 import { DataBase } from "./DataBase";
 
 export class StudentData extends DataBase{
-    public static tableStudents = "student"
+
     
-    async createUser(student:Student):Promise<any>{
+    async createUser(student:Student){
+        const id = Date.now().toString()
         try{
         await this.getConnection()
         .insert({
@@ -13,15 +14,14 @@ export class StudentData extends DataBase{
             email:student.getEmail(),
             birth_date:student.getBirthDate(),
             class_id:student.getClassId(),
+
         })
-        .into(StudentData.tableStudents)
+        .into("student")
         return "Estudante criado com sucesso"
     }catch(error){
         return error.sqlMessage || error.message
     }
-    }
-
-
+}
    async getStudentByName (name:string): Promise<any> {
         try {
             const [result] = await this.getConnection()
@@ -33,8 +33,7 @@ export class StudentData extends DataBase{
             return error.sqlMessage || error.message
         }
     }
-
-    async changeClassByid (id:string,classId:string):Promise<any>{
+    async changeClassByid (id:string,classId:string){
         try {
              await this.getConnection()
             .update("class_id",classId)
@@ -42,6 +41,16 @@ export class StudentData extends DataBase{
             .where("id","LIKE",`${id}`)
             return "Turma alterada com sucesso"
         } catch (error) {
+            return error.sqlMessage || error.message
+        }
+    }
+
+    async getStudentsByHooby(id:string,hobby:string){
+        try{
+            await this.getConnection()
+            
+
+        }catch(error){
             return error.sqlMessage || error.message
         }
     }
