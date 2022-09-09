@@ -4,5 +4,5 @@ build
 
 .env
 
-requests.rest
-queries.sql
+request.rest
+trabalho.sql
