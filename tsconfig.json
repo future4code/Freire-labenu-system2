@@ -7,8 +7,10 @@
       "rootDir": "./src",
       "removeComments": true,
       "strict": true,
+      "noImplicitAny": true,
       "esModuleInterop": true,
       "skipLibCheck": true,
-      "forceConsistentCasingInFileNames": true
+      "forceConsistentCasingInFileNames": true,
+      "resolveJsonModule": true,
    }
 }
