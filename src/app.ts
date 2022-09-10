@@ -1,4 +1,4 @@
-import express, {Express} from "express"
+import express, { Express } from "express"
 import cors from "cors"
 import ClassController from "./endPoints/ClassController"
 
@@ -12,6 +12,7 @@ const classController = new ClassController()
 
 app.post('/class', classController.createClass)
 app.get('/class', classController.getClasses)
+app.put('/class', classController.changeClassModule)
 
 
 export default app

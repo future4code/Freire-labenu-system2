@@ -8,3 +8,13 @@ Content-Type: application/json
 {
     "name":"Turma Ailton"
 }
+
+
+###
+PUT http://localhost:3003/class
+Content-Type: application/json
+
+{
+    "module":"6",
+    "id": "1662757802215"
+}

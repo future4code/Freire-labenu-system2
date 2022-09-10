@@ -1,9 +1,8 @@
 
-
 export default class Class {
     private id: string = Date.now().toString()
     private module: string = '0'
-    constructor(private name: string) {}
+    constructor(private name: string) { }
 
     public getId() {
         return this.id
@@ -15,7 +14,7 @@ export default class Class {
         return this.module
     }
     public setModule(newModule: string) {
-        this.module = newModule 
+        this.module = newModule
         return newModule
     }
 }
