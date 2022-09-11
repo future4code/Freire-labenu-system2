@@ -1,9 +1,9 @@
 import app from "./app";
 import { AddressInfo } from "net"
 import { StudentController} from "./endPoints/studentController";
-import { Student } from "./models/Student";
 
-const server = app.listen( 3002, () => {
+
+const server = app.listen( 3003, () => {
    if (server) {
       const address = server.address() as AddressInfo;
       console.log(`Server is running in http://localhost:${address.port}`);
