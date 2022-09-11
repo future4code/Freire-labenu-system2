@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
+
 export class DataBase {
   private connection: null | Knex = null;
   protected getConnection() {
@@ -19,4 +20,5 @@ export class DataBase {
     }
     return this.connection;
   }
+
 }
