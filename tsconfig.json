@@ -6,11 +6,12 @@
       "outDir": "./build",
       "rootDir": "./src",
       "removeComments": true,
-      "strict": true,
+      "strict": false,
       "noImplicitAny": true,
       "esModuleInterop": true,
-      "skipLibCheck": true,
       "forceConsistentCasingInFileNames": true,
-      "resolveJsonModule": true,
+     "resolveJsonModule": true
+
+
    }
-}
+ } 

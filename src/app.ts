@@ -15,4 +15,5 @@ app.get('/class', classController.getClasses)
 app.put('/class', classController.changeClassModule)
 
 
+
 export default app
