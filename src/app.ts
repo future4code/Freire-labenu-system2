@@ -1,13 +1,18 @@
-import express, {Express} from "express"
+import express, { Express } from "express"
 import cors from "cors"
+import ClassController from "./endPoints/ClassController"
+
 
 const app: Express = express()
 
 app.use(express.json())
 app.use(cors())
 
-app.listen(3003, ()=>{
-   console.log("Server ready!")
-})
+const classController = new ClassController()
+
+app.post('/class', classController.createClass)
+app.get('/class', classController.getClasses)
+app.put('/class', classController.changeClassModule)
+
 
 export default app
